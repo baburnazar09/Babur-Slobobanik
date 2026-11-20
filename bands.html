@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Локальна сцена — VN // METAL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">VN <span>//</span> METAL</a>
+      <nav class="desktop-nav">
+        <a href="index.html">Головна</a>
+        <a href="bands.html" class="active">Локальна сцена</a>
+        <a href="events.html">Афіша</a>
+        <a href="news.html">Світові новини</a>
+        <a href="board.html">Тусовка</a>
+      </nav>
+      <button class="btn btn-yellow btn-sm" onclick="openModal()">+ ДОДАТИ ГУРТ</button>
+    </div>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">ЛОКАЛЬНА СЦЕНА <span>[01]</span></h1>
+        <div class="demo-note">ТУТ ГУРТИ ВІННИЧЧИНИ</div>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" onclick="filterBands('all', this)">ВСІ (4)</button>
+        <button class="filter-btn" onclick="filterBands('nu-metal', this)">#NU-METAL</button>
+        <button class="filter-btn" onclick="filterBands('metalcore', this)">#METALCORE</button>
+        <button class="filter-btn" onclick="filterBands('grunge', this)">#GRUNGE</button>
+      </div>
+
+      <!-- ОСЬ ЦЬОГО ТЕГУ НЕ ВИСТАЧАЛО -->
+      <div class="bands-grid">
+
+        <article class="cd-card" data-genre="nu-metal">
+          <div class="cd-cover">
+            <img src="img/Nazar.jpg" alt="Je Buu" class="cd-photo">
+            <span class="cd-tag">#NU-METAL</span>
+          </div>
+          <div class="cd-body">
+            <h2 class="cd-name">Je Buu</h2>
+            <div class="cd-city">м. Вінниця</div>
+            <div class="mini-player">
+              <button class="play-btn" data-src="audio/track1.m4a" onclick="toggleTrack(this)">▶</button>
+              <div class="track-info">Cover on One Step Closer</div>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="supportBand(this)">ПІДТРИМАТИ (14)</button>
+          </div>
+        </article>
+
+        <article class="cd-card" data-genre="metalcore">
+          <div class="cd-cover">
+            <img src="img/SickSolution.png" alt="Sick Solution" class="cd-photo">
+            <span class="cd-tag">#METALCORE</span>
+          </div>
+          <div class="cd-body">
+            <h2 class="cd-name">Sick Solution</h2>
+            <div class="cd-city">м. Вінниця</div>
+            <div class="mini-player">
+              <button class="play-btn" data-src="audio/track2.m4a" onclick="toggleTrack(this)">▶</button>
+              <div class="track-info">HYENA</div>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="supportBand(this)">ПІДТРИМАТИ (21)</button>
+          </div>
+        </article>
+
+        <article class="cd-card" data-genre="grunge">
+          <div class="cd-cover">
+            <img src="img/LastWander.jfjf" alt="Last Wander" class="cd-photo">
+            <span class="cd-tag">#GRUNGE</span>
+          </div>
+          <div class="cd-body">
+            <h2 class="cd-name">Last Wander</h2>
+            <div class="cd-city">м. Вінниця</div>
+            <div class="mini-player">
+              <button class="play-btn" data-src="audio/Black Lake.m4a" onclick="toggleTrack(this)">▶</button>
+              <div class="track-info">Black Lake</div>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="supportBand(this)">ПІДТРИМАТИ (9)</button>
+          </div>
+        </article>
+
+        <article class="cd-card cd-card-cta" data-genre="all">
+          <div class="cd-cover">
+            <span class="cd-tag">#ВАШ_ЖАНР</span>
+            <div class="cd-disc">+ ADD</div>
+          </div>
+          <div class="cd-body">
+            <h2 class="cd-name">ТВІЙ ГУРТ МОЖЕ БУТИ ТУТ</h2>
+            <div class="cd-city">Вінницька область</div>
+            <div class="mini-player">
+              <div class="track-info">Завантаж свій перший трек</div>
+            </div>
+            <button class="btn btn-yellow btn-sm" onclick="openModal()">+ ДОДАТИ ГУРТ</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">VN // METAL — АНДЕГРАУНД ПОРТАЛ ВІННИЧЧИНИ</div></footer>
+
+  <nav class="bottom-nav">
+    <a href="index.html"><span>▲</span>ГОЛОВНА</a>
+    <a href="bands.html" class="active"><span>◉</span>ГУРТИ</a>
+    <a href="events.html"><span>▦</span>АФІША</a>
+    <a href="news.html"><span>⚡</span>НОВИНИ</a>
+    <a href="board.html"><span>✎</span>ТУСОВКА</a>
+  </nav>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <h3>ДОДАТИ СВІЙ ГУРТ</h3>
+      <div class="form-group"><label>Назва гурту</label><input type="text"></div>
+      <div class="form-group"><label>Місто</label><input type="text"></div>
+      <div style="display: flex; gap: 10px; margin-top: 16px;">
+        <button class="btn btn-primary btn-sm" onclick="closeModal()">ВІДПРАВИТИ</button>
+        <button class="btn btn-outline btn-sm" onclick="closeModal()">ЗАКРИТИ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

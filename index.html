@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VN // METAL — Головна | Рок та метал сцена Вінниччини</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">VN <span>//</span> METAL</a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="active">Головна</a>
+        <a href="bands.html">Локальна сцена</a>
+        <a href="events.html">Афіша</a>
+        <a href="news.html">Світові новини</a>
+        <a href="board.html">Тусовка</a>
+      </nav>
+      <button class="btn btn-yellow btn-sm" onclick="openModal()">+ ДОДАТИ ГУРТ</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge-advisory">VINNYTSIA UNDERGROUND <span>100% HEAVY</span></div>
+          <h1 class="hero-title">ТВОЯ СЦЕНА.<br>ТВІЙ ШУМ.</h1>
+          <p class="hero-desc">
+            Єдиний андеграунд-портал Вінниччини у стилі 2000-х. Знаходь молоді локальні гурти, збирай склад на реп-базу та стеж за головними подіями світової важкої музики.
+          </p>
+          <div class="hero-actions">
+            <a href="bands.html" class="btn btn-primary">СЛУХАТИ ГУРТИ ВІННИЧЧИНИ</a>
+            <a href="events.html" class="btn btn-outline">АФІША ПОДІЙ</a>
+          </div>
+        </div>
+
+     <div class="radio-box">
+  <div class="live-dot">DEMO STREAM // ВІННИЧЧИНА</div>
+  <div class="radio-track" id="radio-now">ПРИКЛАД ГУРТУ #01 — DEMO_TRACK</div>
+  <div class="radio-sub" id="radio-sub">Nu-Metal / Alternative • Локальна добірка</div>
+  <div style="display: flex; gap: 8px;">
+    <button class="btn btn-primary btn-sm" id="radio-btn" onclick="toggleRadio()">▶ СЛУХАТИ ДЕМО-ЕФІР</button>
+    <button class="btn btn-outline btn-sm" onclick="nextRadioTrack()" title="Наступний трек">⏭</button>
+  </div>
+</div>
+    </section>
+
+    <!-- ТІКЕР -->
+    <div class="ticker">
+      <div class="ticker-content">
+        /// НОВІ РЕЛІЗИ ВІННИЧЧИНИ /// ПОШУК МУЗИКАНТІВ У ГУРТ /// СВІТОВІ РОК ТА МЕТАЛ НОВИНИ /// АНДЕГРАУНД ГІГИ /// НОВІ РЕЛІЗИ ВІННИЧЧИНИ /// ПОШУК МУЗИКАНТІВ У ГУРТ /// СВІТОВІ РОК ТА МЕТАЛ НОВИНИ /// АНДЕГРАУНД ГІГИ ///
+      </div>
+    </div>
+
+    <!-- АВТОМАТИЧНЕ МЕНЮ-ОГЛЯД УСІХ РОЗДІЛІВ -->
+    <section class="showcase-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">НАВІГАТОР ПОРТАЛУ <span>[LIVE ОГЛЯД]</span></h2>
+          <div class="demo-note">[КОРОТКЕ ПРЕВ'Ю КОЖНОЇ СТОРІНКИ ]</div>
+        </div>
+
+        <div class="showcase-wrapper" id="showcase-wrapper">
+          <!-- Вкладки -->
+          <div class="showcase-tabs">
+            <button class="showcase-tab active"><span><strong>[01]</strong> ЛОКАЛЬНА СЦЕНА</span></button>
+            <button class="showcase-tab"><span><strong>[02]</strong> АФІША ТА ДВІЖ</span></button>
+            <button class="showcase-tab"><span><strong>[03]</strong> СВІТОВІ НОВИНИ</span></button>
+            <button class="showcase-tab"><span><strong>[04]</strong> ПОШУК В ГУРТ</span></button>
+          </div>
+
+          
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="showcase-progress"></div>
+          </div>
+
+          <!-- Слайди -->
+          <div class="showcase-slides">
+             
+            <div class="slide-panel active">
+              <div class="slide-grid">
+                <div>
+                  <div class="slide-kicker">// РОЗДІЛ 01 • КАТАЛОГ ВИКОНАВЦІВ</div>
+                  <h3 class="slide-title">МОЛОДІ ГУРТИ ВІННИЧЧИНИ</h3>
+                  <p class="slide-desc">
+                    Слухай демки локальних команд із Вінниці, Жмеринки, Козятина та інших міст області. Підтримуй музикантів та завантажуй власний проєкт.
+                  </p>
+                  <a href="bands.html" class="btn btn-primary btn-sm">ПЕРЕЙТИ ДО ГУРТІВ →</a>
+                </div>
+                <div class="slide-preview-box">
+                  <div class="preview-item"><span>ПРИКЛАД ГУРТУ #01 (Вінниця)</span><span class="preview-badge">#NU-METAL</span></div>
+                  <div class="preview-item"><span>ПРИКЛАД ГУРТУ #02 (Жмеринка)</span><span class="preview-badge">#METALCORE</span></div>
+                  <div class="preview-item"><span>ПРИКЛАД ГУРТУ #03 (Козятин)</span><span class="preview-badge">#GRUNGE</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-panel">
+              <div class="slide-grid">
+                <div>
+                  <div class="slide-kicker">// РОЗДІЛ 02 • КОНЦЕРТИ ТА ДЖЕМИ</div>
+                  <h3 class="slide-title">АФІША ЛОКАЛЬНИХ ПОДІЙ</h3>
+                  <p class="slide-desc">
+                    Актуальний розклад андеграунд-гігів, відкритих мікрофонів та репетиційних джемів. Відмічайся у квитках, щоб бачити, хто з тусовки йде.
+                  </p>
+                  <a href="events.html" class="btn btn-primary btn-sm">ВІДКРИТИ АФІШУ →</a>
+                </div>
+                <div class="slide-preview-box">
+                  <div class="preview-item"><span>28 ЛИСТ • VINNYTSIA NU-METAL NIGHT</span><span class="preview-badge">34 ЙДУТЬ</span></div>
+                  <div class="preview-item"><span>05 ГРУД • OPEN MIC / РОК-ДЖЕМ</span><span class="preview-badge">ВІЛЬНИЙ ВХІД</span></div>
+                  <div class="preview-item"><span>14 ГРУД • WINTER CORE FEST (ПРИКЛАД)</span><span class="preview-badge">19:00</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-panel">
+              <div class="slide-grid">
+                <div>
+                  <div class="slide-kicker">// РОЗДІЛ 03 • СВІТОВА СЦЕНА</div>
+                  <h3 class="slide-title">СВІТОВИЙ РОК ТА МЕТАЛ ХАОС</h3>
+                  <p class="slide-desc">
+                    Головні релізи, анонси турів легенд 2000-х, новини важкої індустрії та корисні поради зі звуку й гітарного обладнання.
+                  </p>
+                  <a href="news.html" class="btn btn-primary btn-sm">ЧИТАТИ НОВИНИ →</a>
+                </div>
+                <div class="slide-preview-box">
+                  <div class="preview-item"><span>Повернення звучання 2000-х у сучасний метал</span><span class="preview-badge">ГАРЯЧЕ</span></div>
+                  <div class="preview-item"><span>Налаштування гітарного перегрузу на базі</span><span class="preview-badge">ГАЙД</span></div>
+                  <div class="preview-item"><span>Огляд свіжих альбомів тижня</span><span class="preview-badge">РЕЛІЗИ</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-panel">
+              <div class="slide-grid">
+                <div>
+                  <div class="slide-kicker">// РОЗДІЛ 04 • КОМ'ЮНІТІ</div>
+                  <h3 class="slide-title">ШУКАЮ В ГУРТ / ТУСОВКА</h3>
+                  <p class="slide-desc">
+                    Дошка оголошень для музикантів та слухачів: пошук барабанщиків, басистів, вокалістів, обмін стафом і збори компаній перед концертами.
+                  </p>
+                  <a href="board.html" class="btn btn-primary btn-sm">ПЕРЕЙТИ ДО ОГОЛОШЕНЬ →</a>
+                </div>
+                <div class="slide-preview-box">
+                  <div class="preview-item"><span>Шукаємо драмера (стиль Korn / Deftones)</span><span class="preview-badge">ВІННИЦЯ</span></div>
+                  <div class="preview-item"><span>Гітарист Drop C шукає басиста та вокал</span><span class="preview-badge">ПРОЄКТ</span></div>
+                  <div class="preview-item"><span>Збір біля Вежі перед суботнім гігом</span><span class="preview-badge">ТУСОВКА</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Нижня панель керування слайдером -->
+          <div class="showcase-controls">
+            <span id="slider-status"></span>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-outline btn-sm" id="prev-slide">←</button>
+              <button class="btn btn-outline btn-sm" id="next-slide">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">VN // METAL — АНДЕГРАУНД ПОРТАЛ ВІННИЧЧИНИ</div>
+  </footer>
+
+  <!-- Мобільна навігація -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="active"><span>▲</span>ГОЛОВНА</a>
+    <a href="bands.html"><span>◉</span>ГУРТИ</a>
+    <a href="events.html"><span>▦</span>АФІША</a>
+    <a href="news.html"><span>⚡</span>НОВИНИ</a>
+    <a href="board.html"><span>✎</span>ТУСОВКА</a>
+  </nav>
+
+  <!-- Модальне вікно -->
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <h3>ДОДАТИ СВІЙ ГУРТ</h3>
+      <div class="form-group"><label>Назва гурту</label><input type="text" placeholder="Наприклад: Noise From Podillya"></div>
+      <div class="form-group"><label>Місто (Вінниччина)</label><input type="text" placeholder="Вінниця / Жмеринка / Козятин"></div>
+      <div class="form-group"><label>Жанр</label><select><option>Nu-Metal</option><option>Metalcore</option><option>Grunge</option></select></div>
+      <div class="form-group"><label>Посилання на демо</label><input type="url" placeholder="https://..."></div>
+      <div style="display: flex; gap: 10px; margin-top: 16px;">
+        <button class="btn btn-primary btn-sm" onclick="closeModal()">ВІДПРАВИТИ</button>
+        <button class="btn btn-outline btn-sm" onclick="closeModal()">ЗАКРИТИ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

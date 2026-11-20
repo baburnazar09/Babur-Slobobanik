@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Афіша та двіж — VN // METAL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">VN <span>//</span> METAL</a>
+      <nav class="desktop-nav">
+        <a href="index.html">Головна</a>
+        <a href="bands.html">Локальна сцена</a>
+        <a href="events.html" class="active">Афіша</a>
+        <a href="news.html">Світові новини</a>
+        <a href="board.html">Тусовка</a>
+      </nav>
+      <a href="board.html" class="btn btn-yellow btn-sm">+ ДОДАТИ ПОДІЮ</a>
+    </div>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">АФІША ТА ДВІЖ <span>[02]</span></h1>
+        <div class="demo-note">[КВИТКИ НА ЛОКАЛЬНІ КОНЦЕРТИ ТА ДЖЕМИ]</div>
+      </div>
+
+      <div class="tickets-list">
+        <div class="ticket">
+          <div class="ticket-date"><strong>28</strong><span>ЛИСТ</span></div>
+          <div class="ticket-info">
+            <div>
+              <h2 class="ticket-title">VINNYTSIA NU-METAL NIGHT (ПРИКЛАД)</h2>
+              <div class="ticket-meta">19:00 • Локальний клуб, Вінниця</div>
+            </div>
+            <div class="ticket-footer">
+              <span class="ticket-meta">Штрих-код: #VN-001</span>
+              <button class="btn btn-primary btn-sm" onclick="toggleGoing(this, 34)">ЙДУ (34)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-date"><strong>05</strong><span>ГРУД</span></div>
+          <div class="ticket-info">
+            <div>
+              <h2 class="ticket-title">OPEN MIC / РОК-ДЖЕМ НА БАЗІ (ПРИКЛАД)</h2>
+              <div class="ticket-meta">18:30 • Репетиційна точка, Вишенька</div>
+            </div>
+            <div class="ticket-footer">
+              <span class="ticket-meta">Вхід: вільний</span>
+              <button class="btn btn-primary btn-sm" onclick="toggleGoing(this, 19)">ЙДУ (19)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-date"><strong>14</strong><span>ГРУД</span></div>
+          <div class="ticket-info">
+            <div>
+              <h2 class="ticket-title">WINTER UNDERGROUND FEST (ПРИКЛАД)</h2>
+              <div class="ticket-meta">18:00 • Арт-простір, Замостя</div>
+            </div>
+            <div class="ticket-footer">
+              <span class="ticket-meta">Штрих-код: #VN-003</span>
+              <button class="btn btn-primary btn-sm" onclick="toggleGoing(this, 47)">ЙДУ (47)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">VN // METAL — АНДЕГРАУНД ПОРТАЛ ВІННИЧЧИНИ</div></footer>
+
+  <nav class="bottom-nav">
+    <a href="index.html"><span>▲</span>ГОЛОВНА</a>
+    <a href="bands.html"><span>◉</span>ГУРТИ</a>
+    <a href="events.html" class="active"><span>▦</span>АФІША</a>
+    <a href="news.html"><span>⚡</span>НОВИНИ</a>
+    <a href="board.html"><span>✎</span>ТУСОВКА</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

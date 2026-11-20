@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тусовка та пошук в гурт — VN // METAL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">VN <span>//</span> METAL</a>
+      <nav class="desktop-nav">
+        <a href="index.html">Головна</a>
+        <a href="bands.html">Локальна сцена</a>
+        <a href="events.html">Афіша</a>
+        <a href="news.html">Світові новини</a>
+        <a href="board.html" class="active">Тусовка</a>
+      </nav>
+      <button class="btn btn-yellow btn-sm" onclick="openModal()">+ ОГОЛОШЕННЯ</button>
+    </div>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">ШУКАЮ В ГУРТ / ТУСОВКА <span>[04]</span></h1>
+        <div class="demo-note">[ДОШКА ОГОЛОШЕНЬ МУЗИКАНТІВ ТА СЛУХАЧІВ ВІННИЧЧИНИ]</div>
+      </div>
+
+      <div class="board-grid">
+        <div class="sticker-card">
+          <span class="sticker-tag">ПОШУК МУЗИКАНТА</span>
+          <h2 class="sticker-title">ШУКАЄМО ДРАМЕРА (ПРИКЛАД)</h2>
+          <p class="sticker-text">Граємо у стилі Korn / Deftones. Є своя точка у Вінниці, матеріал готовий на 5 треків. Пишіть у ТГ.</p>
+          <button class="btn btn-outline btn-sm">ВІДГУКНУТИСЬ</button>
+        </div>
+
+        <div class="sticker-card">
+          <span class="sticker-tag">БАСИСТ / ВОКАЛ</span>
+          <h2 class="sticker-title">ЗБЕРЕМО ПРОЄКТ У СТИЛІ 2000-Х</h2>
+          <p class="sticker-text">Гітарист (стрій Drop C / Drop B) шукає однодумців для джемів та запису першого EP.</p>
+          <button class="btn btn-outline btn-sm">ВІДГУКНУТИСЬ</button>
+        </div>
+
+        <div class="sticker-card">
+          <span class="sticker-tag">КОМПАНІЯ НА ГІГ</span>
+          <h2 class="sticker-title">ЗБІР ПЕРЕД КОНЦЕРТОМ</h2>
+          <p class="sticker-text">Хто йде на суботній двіж сам? Збираємось о 18:00 біля Вежі, знайомимось і йдемо разом.</p>
+          <button class="btn btn-outline btn-sm">ДОЛУЧИТИСЬ</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">VN // METAL — АНДЕГРАУНД ПОРТАЛ ВІННИЧЧИНИ</div></footer>
+
+  <nav class="bottom-nav">
+    <a href="index.html"><span>▲</span>ГОЛОВНА</a>
+    <a href="bands.html"><span>◉</span>ГУРТИ</a>
+    <a href="events.html"><span>▦</span>АФІША</a>
+    <a href="news.html"><span>⚡</span>НОВИНИ</a>
+    <a href="board.html" class="active"><span>✎</span>ТУСОВКА</a>
+  </nav>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <h3>СТВОРИТИ ОГОЛОШЕННЯ</h3>
+      <div class="form-group"><label>Заголовок</label><input type="text" placeholder="Шукаємо басиста..."></div>
+      <div class="form-group"><label>Опис та контакт (Telegram)</label><input type="text" placeholder="@username"></div>
+      <div style="display: flex; gap: 10px; margin-top: 16px;">
+        <button class="btn btn-primary btn-sm" onclick="closeModal()">ОПУБЛІКУВАТИ</button>
+        <button class="btn btn-outline btn-sm" onclick="closeModal()">ЗАКРИТИ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
